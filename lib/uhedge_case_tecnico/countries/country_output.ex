@@ -5,6 +5,6 @@ defmodule UhedgeCaseTecnico.Countries.CountryOutput do
     field :name, :string, allow_nil?: false
     field :capital, :string, allow_nil?: false
     field :region, :string, allow_nil?: false
-    field :language, :string, allow_nil?: false
+    field :languages, {:array, :string}, allow_nil?: false
   end
 end

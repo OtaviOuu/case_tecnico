@@ -41,7 +41,8 @@ defmodule UhedgeCaseTecnicoWeb.Router do
   scope "/", UhedgeCaseTecnicoWeb do
     pipe_through :browser
 
-    get "/", PageController, :home
+    live "/", Countries.Index, :index
+
     auth_routes AuthController, UhedgeCaseTecnico.Accounts.User, path: "/auth"
     sign_out_route AuthController
 

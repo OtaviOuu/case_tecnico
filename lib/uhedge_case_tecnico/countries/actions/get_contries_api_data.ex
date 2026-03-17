@@ -6,13 +6,13 @@ defmodule UhedgeCaseTecnico.Countries.Actions.GetContriesApiData do
       %UhedgeCaseTecnico.Countries.CountryOutput{
         name: "brazil",
         capital: "brasília",
-        language: "pt-br",
+        languages: ["pt", "en"],
         region: "south america"
       },
       %UhedgeCaseTecnico.Countries.CountryOutput{
         name: "argentina",
         capital: "buenos aires",
-        language: "es",
+        languages: ["es", "en"],
         region: "south america"
       }
     ]
