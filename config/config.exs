@@ -52,7 +52,7 @@ config :spark,
 config :uhedge_case_tecnico,
   ecto_repos: [UhedgeCaseTecnico.Repo],
   generators: [timestamp_type: :utc_datetime],
-  ash_domains: [UhedgeCaseTecnico.Accounts]
+  ash_domains: [UhedgeCaseTecnico.Countries, UhedgeCaseTecnico.Accounts]
 
 # Configure the endpoint
 config :uhedge_case_tecnico, UhedgeCaseTecnicoWeb.Endpoint,

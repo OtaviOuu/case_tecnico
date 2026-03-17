@@ -1,0 +1,10 @@
+defmodule UhedgeCaseTecnico.Countries.CountryOutput do
+  use Ash.TypedStruct
+
+  typed_struct do
+    field :name, :string, allow_nil?: false
+    field :capital, :string, allow_nil?: false
+    field :region, :string, allow_nil?: false
+    field :language, :string, allow_nil?: false
+  end
+end
