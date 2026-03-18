@@ -4,14 +4,13 @@ defmodule UhedgeCaseTecnicoWeb.Countries.Index do
   def mount(_params, _session, socket) do
     socket
     |> assign_contries()
-    |> dbg
     |> ok()
   end
 
   def assign_contries(socket) do
     socket
     |> assign_async(:countries, fn ->
-      {:ok, %{countries: UhedgeCaseTecnico.Countries.list_countries!(1)}}
+      {:ok, %{countries: UhedgeCaseTecnico.Countries.list_countries!(33)}}
     end)
   end
 
@@ -20,7 +19,7 @@ defmodule UhedgeCaseTecnicoWeb.Countries.Index do
     <Layouts.app {assigns}>
       <.async_result :let={countries} assign={@countries}>
         <:loading><.contries_grid_skeleton /></:loading>
-        <:failed :let={_failure}>err</:failed>
+        <:failed :let={_failure}>Erro ao carregar os países.</:failed>
         <.contries_grid countries={countries} />
       </.async_result>
     </Layouts.app>

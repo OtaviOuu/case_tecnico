@@ -3,8 +3,10 @@ defmodule UhedgeCaseTecnico.Countries.Actions.GetContriesApiData do
 
   @api "https://restcountries.com/v3.1/all?fields=name,capital,region,languages,flags"
 
-  def run(action_input, opts, context) do
+  def run(%{arguments: %{limit: limit}}, opts, context) do
     with {:ok, %{body: body}} <- Req.get(@api) do
+      body = Enum.take(body, limit)
+
       {:ok, Enum.map(body, &to_struct/1)}
     end
   end
