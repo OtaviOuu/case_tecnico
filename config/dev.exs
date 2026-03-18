@@ -1,13 +1,6 @@
 import Config
 config :ash, policies: [show_policy_breakdowns?: true]
 
-# Configure your database
-config :uhedge_case_tecnico, UhedgeCaseTecnico.Repo,
-  database: Path.expand("../uhedge_case_tecnico_dev.db", __DIR__),
-  pool_size: 5,
-  stacktrace: true,
-  show_sensitive_data_on_connection_error: true
-
 # For development, we disable any cache and enable
 # debugging and code reloading.
 #
