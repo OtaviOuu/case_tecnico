@@ -5,7 +5,7 @@ defmodule UhedgeCaseTecnico.Countries do
   # name, capital, region, languages
   resources do
     resource UhedgeCaseTecnico.Countries.Country do
-      define :list_countries, action: :read, args: [:limit]
+      define :list_countries, action: :read
     end
   end
 end

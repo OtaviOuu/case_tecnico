@@ -5,8 +5,6 @@ defmodule UhedgeCaseTecnico.Countries.Country do
 
   actions do
     action :read, {:array, UhedgeCaseTecnico.Countries.CountryOutput} do
-      argument :limit, :integer
-
       run UhedgeCaseTecnico.Countries.Actions.GetContriesApiData
     end
   end
