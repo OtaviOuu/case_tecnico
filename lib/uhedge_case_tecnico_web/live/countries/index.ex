@@ -12,7 +12,7 @@ defmodule UhedgeCaseTecnicoWeb.Countries.Index do
 
   defp load_countries(socket) do
     assign_async(socket, :all_countries, fn ->
-      {:ok, %{all_countries: UhedgeCaseTecnico.Countries.list_countries!(330)}}
+      {:ok, %{all_countries: UhedgeCaseTecnico.Countries.list_countries!()}}
     end)
   end
 

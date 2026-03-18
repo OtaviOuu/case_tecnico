@@ -38,7 +38,7 @@ defmodule UhedgeCaseTecnicoWeb.Layouts do
     <div class="navbar bg-base-100 shadow-sm">
       <div class="navbar-start"></div>
       <div class="navbar-center">
-        <a class="btn btn-ghost text-xl">daisyUI</a>
+        <a class="btn btn-ghost text-xl">RestCountryAPI</a>
       </div>
       <div class="navbar-end"></div>
     </div>
