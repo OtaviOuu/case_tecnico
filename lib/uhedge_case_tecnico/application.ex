@@ -9,9 +9,6 @@ defmodule UhedgeCaseTecnico.Application do
   def start(_type, _args) do
     children = [
       UhedgeCaseTecnicoWeb.Telemetry,
-      UhedgeCaseTecnico.Repo,
-      {Ecto.Migrator,
-       repos: Application.fetch_env!(:uhedge_case_tecnico, :ecto_repos), skip: skip_migrations?()},
       {DNSCluster,
        query: Application.get_env(:uhedge_case_tecnico, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: UhedgeCaseTecnico.PubSub},
